@@ -1,4 +1,4 @@
-from ibgeexporer.infrastructure.logging import LogWriter
+from ibgeexplorer.infrastructure.logging import LogWriter
 
 
 def test_logwriter_basic_usage():
