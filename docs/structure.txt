@@ -1,0 +1,51 @@
+src/
+└── ibgeexporer/
+    ├── domain/                      # Núcleo da aplicação
+    │   ├── models/                  # Modelos de domínio
+    │   │   └── agregado.py          # Modelo para agregados IBGE
+    │   ├── services/                # Serviços de domínio
+    │   └── repositories/            # Interfaces de repositórios
+    │       └── agregado_repository.py
+    │
+    ├── application/                 # Casos de uso
+    │   ├── dtos/                    # Objetos de transferência
+    │   ├── interfaces/              # Portas para adaptadores
+    │   │   ├── ibge_data_provider.py
+    │   │   └── etl_job.py
+    │   └── usecases/                # Implementação dos casos de uso
+    │       └── sincronizar_agregados_usecase.py
+    │
+    ├── adapters/                    # Adaptadores
+    │   ├── input/                   # Adaptadores de entrada
+    │   │   └── web/                 # Controllers web/API
+    │   │       └── controllers/
+    │   │           └── agregados_controller.py
+    │   └── output/                  # Adaptadores de saída
+    │       ├── ibge/                # Cliente API IBGE
+    │       │   └── ibge_api_client.py
+    │       └── storage/             # Persistência
+    │           └── mongodb_agregado_repository.py
+    │
+    ├── infrastructure/              # Infraestrutura técnica
+    │   ├── config/                  # Configurações
+    │   │   ├── container.py         # Container de DI
+    │   │   └── settings.py          # Configurações da aplicação
+    │   ├── database/                # Conexões de banco de dados
+    │   │   └── mongodb.py
+    │   ├── async_utils/             # Utilitários assíncronos
+    │   │   └── task_queue.py
+    │   ├── logging/                 # Sistema de logs
+    │   │   └── logger.py
+    │   └── serialization/           # Serialização/desserialização
+    │       └── json_deserializer.py
+    │
+    └── presentation/                # Interface com usuário
+        ├── web/                     # Interface web (opcional)
+        │   └── app.py
+        └── api/                     # API REST
+            └── main.py              # Ponto de entrada FastAPI
+
+# Arquivos adicionais na raiz do projeto
+├── requirements.txt                 # Dependências
+├── pyproject.toml                   # Configuração do projeto
+└── README.md                        # Documentação
