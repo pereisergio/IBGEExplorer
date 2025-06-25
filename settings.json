@@ -1,0 +1,10 @@
+{
+  "api": "https://servicodados.ibge.gov.br/api/v3/agregados",
+  "pesquisas": {
+    "XX": {
+      "agregados": ["xxx"],
+      "classificacoes": ["xxx"],
+      "variaveis": ["xxx"]
+    }
+  }
+}

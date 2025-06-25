@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from ibgeexplorer.domain.models import Categoria
+from ibgeexplorer.domain.models.categoria import Categoria
 
 
 @dataclass

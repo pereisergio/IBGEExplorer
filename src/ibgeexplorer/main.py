@@ -1,4 +1,4 @@
-from ibgeexplorer.infrastructure.logging import LogWriter
+from ibgeexplorer.utils.logger import LogWriter
 
 
 def main():

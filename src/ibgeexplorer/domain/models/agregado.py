@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 
-from ibgeexplorer.domain.models import Classificacao, Variavel
+from ibgeexplorer.domain.models.classificacao import Classificacao
+from ibgeexplorer.domain.models.variavel import Variavel
 
 
 @dataclass
